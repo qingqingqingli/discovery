@@ -5,7 +5,7 @@
 
 The task is to create an **API endpoint** */discovery* that takes coordinates of the customer as an input and then **returns a page (JSON response)** containing *most popular, newest and nearby* restaurants (based on given coordinates).
 
-More details please refer to the [detailed assignment].(https://github.com/woltapp/summer2021-internship)
+More details please refer to the [detailed assignment](https://github.com/woltapp/summer2021-internship).
 
 ## My process
 
@@ -50,4 +50,4 @@ Some examples:
 
 > Example of JSON response. There is an option to download the JSON file (left corner)
 
-[![json_responses](https://github.com/qingqingqingli/discovery/blob/main/images/json_responses.png)](https://github.com/qingqingqingli/discovery)
+[![json_response](https://github.com/qingqingqingli/discovery/blob/main/images/json_response.png)](https://github.com/qingqingqingli/discovery)
