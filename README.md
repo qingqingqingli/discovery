@@ -13,11 +13,11 @@ Before this assignment, I did not know how to work with `Python`, `Flask` and `J
 
 Even though due to time limit, I did not have time to develop unit tests, or a containerized environment for easier testing. I had a lot of fun in the learning process and developing a solution.
 
-## How to test
+## Disclaimer
 
-- Disclaimer: `Python` is required for this project. If you don't have it, please follow [this link](https://www.python.org/downloads/) to download it first. This demonstration is done on a Linux distribution (```Pop!_OS 20.04 LTS```).
+`Python` is required for this project. If you don't have it, please follow [this link](https://www.python.org/downloads/) to download it first. This demonstration is done on a Linux distribution (```Pop!_OS 20.04 LTS```).
 
-> **Step 1: Clone the project & run setup.sh script**
+## Step 1: Clone the project & run setup.sh script
 
 The `setup.sh` script automates the process to install `pip`, `required Python packages` for this project, and the `python script` to start the endpoint.
 
@@ -39,7 +39,7 @@ sh setup.sh
 
 [![setup_2](https://github.com/qingqingqingli/discovery/blob/main/images/setup_2.png)](https://github.com/qingqingqingli/discovery)
 
-> **Step 2: Open browser and enter your requests**
+## Step 2: Open browser and enter your requests
 
 Location of a customer needs to be provided as **request parameters** *lat* (latitude) and *lon* (longitude), e.g. */discovery?lat=60.1709&lon=24.941*. Both parameters accept float values.
 
