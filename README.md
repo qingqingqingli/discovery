@@ -21,7 +21,7 @@ Even though due to time limit, I did not have time to develop unit tests, or a c
 
 > Step 1: Clone the project & run setup.sh script
 
-The `setup.sh` script automates the process to install `pip`, `required packages` for this project and `python script` to start the endpoint.
+The `setup.sh` script automates the process to install `pip`, required packages for this project, and the python script to start the endpoint.
 
 ```shell
 
