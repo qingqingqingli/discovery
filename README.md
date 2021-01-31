@@ -19,17 +19,24 @@ Even though due to time limit, I did not have time to develop unit tests, or a c
 
 - Disclaimer: `Python` is required for this project. If you don't have it, please follow [this link](https://www.python.org/downloads/) to download it first. This demonstration is done on a Linux distribution (```Pop!_OS 20.04 LTS```).
 
-> Step 1: Clone the project & run setup.sh script
+> **Step 1: Clone the project & run setup.sh script**
 
-The `setup.sh` script automates the process to install `pip`, required packages for this project, and the python script to start the endpoint.
+The `setup.sh` script automates the process to install `pip`, `required Python packages` for this project, and the `python script` to start the endpoint.
 
 ```shell
 
 cd Desktop && git clone https://github.com/qingqingqingli/discovery.git
 
-cd discovery
+cd discovery && ls
 
 sh setup.sh
 
 ```
 
+> Demo of starting the project
+
+[![setup_1](https://github.com/qingqingqingli/discovery/blob/main/images/setup_1.png)](https://github.com/qingqingqingli/discovery)
+
+> A Flask app will start running, providing the access to test '/discovery' endpoint
+
+[![setup_2](https://github.com/qingqingqingli/discovery/blob/main/images/setup_2.png)](https://github.com/qingqingqingli/discovery)
