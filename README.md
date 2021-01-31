@@ -56,6 +56,3 @@ Due to the time limit, I did not develop everything that I wanted. I intend to c
 
 - [ ] Unit tests
 - [ ] A Docker Container for easier testing
-
-## Resources
-
