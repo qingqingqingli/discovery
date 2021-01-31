@@ -51,3 +51,11 @@ Some examples:
 > Example of JSON response. There is an option to download the JSON file (left corner)
 
 [![json_response](https://github.com/qingqingqingli/discovery/blob/main/images/json_response.png)](https://github.com/qingqingqingli/discovery)
+
+## To do
+
+Due to time limit, I did not develop everything that I wanted. I intend to continue developing the following:
+
+- [ ] Unit tests
+- [ ] A Docker Container for easier testing
+
