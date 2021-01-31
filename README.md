@@ -50,4 +50,4 @@ Some examples:
 
 > Example of JSON response. There is an option to download the JSON file (left corner)
 
-[![json_response](https://github.com/qingqingqingli/discovery/blob/main/images/json_response.png)](https://github.com/qingqingqingli/discovery)
+[![json_responses](https://github.com/qingqingqingli/discovery/blob/main/images/json_responses.png)](https://github.com/qingqingqingli/discovery)
