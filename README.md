@@ -11,7 +11,7 @@ More details please refer to the [detailed assignment].(https://github.com/wolta
 
 ## My process
 
-Before this assignment, I did not know how to work with Python, Flask and JSON for backend development. Within 3 days, I taught myself the basic concepts and completed the assignment. 
+Before this assignment, I did not know how to work with `Python`, `Flask` and `JSON` for backend development. Within 3 days, I taught myself the basic concepts and completed the assignment. 
 
 Even though due to time limit, I did not have time to develop unit tests, or a containerized environment for easier testing. I had a lot of fun in the learning process and developing a solution.
 
@@ -25,7 +25,11 @@ The `setup.sh` script automates the process to install `pip`, `required packages
 
 ```shell
 
-cd Desktop && git clone 
+cd Desktop && git clone https://github.com/qingqingqingli/discovery.git
+
+cd discovery
+
+sh setup.sh
 
 ```
 
