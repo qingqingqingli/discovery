@@ -1,4 +1,4 @@
-# <---------------*** import functions & macro definitions ***------------------->
+# <---------------*** import functions & macro definitions ***----------------->
 import json
 from math import sin, cos, atan2, sqrt, pi
 from datetime import datetime, date
@@ -8,7 +8,7 @@ max_distance = 1.5  # 1.5km
 max_dates = 120  # 4 months
 max_restaurants = 10  # max number of restaurants in a list
 
-# <-------------------------*** setup flask ***------------------------>
+# <-------------------------*** setup flask ***-------------------------------->
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
@@ -16,13 +16,13 @@ app.config['JSON_SORT_KEYS'] = False
 
 
 def start_process(customer_lon, customer_lat):
-    # <----------------------*** load restaurants.json file ***------------------->
+    # <-------------------*** load restaurants.json file ***------------------->
     with open('srcs/restaurants.json', 'r') as f:
         data = json.load(f)
 
     restaurant_list = data['restaurants']
 
-    # <-------------------------*** calculate customer & restaurant ***------------------------>
+    # <--------------*** calculate customer & restaurant ***------------------->
 
     def degree_to_radians(degrees):
         return degrees * pi / 180
@@ -47,11 +47,12 @@ def start_process(customer_lon, customer_lat):
     for restaurant in restaurant_list:
         restaurant_lon = restaurant['location'][0]
         restaurant_lat = restaurant['location'][1]
-        haversine_distance = compute_haversine_dis(customer_lon, customer_lat, restaurant_lon, restaurant_lat)
+        haversine_distance = compute_haversine_dis(customer_lon, customer_lat,
+		restaurant_lon, restaurant_lat)
         d = {'distance': haversine_distance}
         restaurant.update(d)
 
-    # <-------------------------*** create sorted by distance list ***------------------------>
+    # <--------------*** create sorted by distance list ***-------------------->
 
     # create a list with restaurants within max_distance(1.5km)
     r_within_max_dist_list = []
@@ -65,7 +66,7 @@ def start_process(customer_lon, customer_lat):
     for restaurant in r_within_max_dist_list and sorted_by_distance_list:
         del restaurant['distance']
 
-    # <-------------------------*** create sorted by date & popularity list ***------------------------>
+    # ----------*** create sorted by date & popularity list ***---------------->
 
     # create a list with restaurants within max_dates(4 months)
     r_within_max_date_list = []
@@ -78,11 +79,12 @@ def start_process(customer_lon, customer_lat):
             r_within_max_date_list.append(restaurant)
 
     # create two sorted list
-    sorted_by_date_list = sorted(r_within_max_date_list,
-                                 key=lambda r: datetime.strptime(r['launch_date'], '%Y-%m-%d'), reverse=True)
-    sorted_by_popularity_list = sorted(r_within_max_dist_list, key=lambda i: i['popularity'], reverse=True)
+    sorted_by_date_list = sorted(r_within_max_date_list, key=lambda r: \
+		datetime.strptime(r['launch_date'], '%Y-%m-%d'), reverse=True)
+    sorted_by_popularity_list = sorted(r_within_max_dist_list, key=lambda i: \
+		i['popularity'], reverse=True)
 
-    # <-------------------------*** create final lists with max 10 elements ***------------------------>
+    # <------------*** create final lists with max 10 elements ***------------->
 
     # prioritise 'online' when creating final 10
     def select_final_restaurants(sorted_list, result_list):
@@ -108,7 +110,7 @@ def start_process(customer_lon, customer_lat):
     if len(sorted_by_date_list):
         select_final_restaurants(sorted_by_date_list, new_list)
 
-    # <-------------------------*** create final nested dictionary ***------------------------>
+    # <----------------*** create final nested dictionary ***------------------>
 
     return_dict = {}
     restaurants_list = []
@@ -130,7 +132,7 @@ def start_process(customer_lon, customer_lat):
     return jsonify(return_dict)
 
 
-# <-------------------------*** setup flask endpoint ***------------------------>
+# <-------------------------*** setup flask endpoint ***----------------------->
 
 @app.route('/', methods=['GET'])
 def home():
@@ -142,14 +144,14 @@ def discovery():
     if 'lon' in request.args and 'lat' in request.args:
         customer_lon = float(request.args['lon'])
         customer_lat = float(request.args['lat'])
-        if not customer_lon or not customer_lat or customer_lon < -180 or customer_lon > 180 \
-                or customer_lat < -90 or customer_lat > 90:
+        if not customer_lon or not customer_lat or customer_lon < -180 or \
+			customer_lon > 180 or customer_lat < -90 or customer_lat > 90:
             return '<h1>ERROR: [lat] & [lon] are not in the correct range.</h1>'
         return start_process(customer_lon, customer_lat)
     else:
         return '<h1>ERROR: need to provide [lat] & [lon] fields.</h1>'
 
 
-# <-------------------------*** start flask ***------------------------>
+# <---------------------------*** start flask ***------------------------------>
 
 app.run()
