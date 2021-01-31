@@ -9,11 +9,9 @@ More details please refer to the [detailed assignment](https://github.com/woltap
 
 ## My process
 
-Before this assignment, I did not know how to work with `Python`, `Flask` and `JSON` for backend development. Within 3 days, I taught myself the basic concepts and completed the assignment. 
+Before working on this assignment, I did not know how to work with `Python`, `Flask` and `JSON` for backend development. During the last 3 days, I started with understanding the problem, drawing down the process flow and tackling each technical element along the way. I really enjoyed the process to learn and develop something at the same time. 
 
-Even though due to time limit, I did not have time to develop unit tests, or a containerized environment for easier testing. I had a lot of fun in the learning process and developing a solution.
-
-## Disclaimer
+## Disclaimer before testing
 
 `Python` is required for this project. If you don't have it, please follow [this link](https://www.python.org/downloads/) to download it first. This demonstration is done on a Linux distribution (```Pop!_OS 20.04 LTS```).
 
@@ -54,8 +52,10 @@ Some examples:
 
 ## To do
 
-Due to time limit, I did not develop everything that I wanted. I intend to continue developing the following:
+Due to the time limit, I did not develop everything that I wanted. I intend to continue developing the following:
 
 - [ ] Unit tests
 - [ ] A Docker Container for easier testing
+
+## Resources
 
