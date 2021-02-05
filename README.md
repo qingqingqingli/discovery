@@ -61,7 +61,7 @@ sh setup.sh
 
 > A Flask app will start running, providing the access to test '/discovery' endpoint
 
-[![setup_2](https://github.com/qingqingqingli/discovery/blob/main/images/setup_2.png)](https://github.com/qingqingqingli/discovery)
+[![setup_2](https://github.com/qingqingqingli/readme_images/blob/master/discovery_setup_2.png)](https://github.com/qingqingqingli/discovery)
 
 - Step 2: Open browser and enter your requests.
 
@@ -74,4 +74,4 @@ Location of a customer needs to be provided as **request parameters** *lat* (lat
 
 > Example of JSON response. There is an option to download the JSON file (left corner)
 
-[![json_response](https://github.com/qingqingqingli/discovery/blob/main/images/json_response.png)](https://github.com/qingqingqingli/discovery)
+[![json_response](https://github.com/qingqingqingli/readme_images/blob/master/discovery_json.png)](https://github.com/qingqingqingli/discovery)
