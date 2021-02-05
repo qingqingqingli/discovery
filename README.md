@@ -1,9 +1,9 @@
 # Discovery Endpoint Development
 ***This project develops an API endpoint based on restaurant data.***
 
-## Backend assignment overview
+## Overview
 
-The task is to create an **API endpoint** */discovery* that takes coordinates of the customer as an input and then **returns a page (JSON response)** containing *most popular, newest and nearby* restaurants (based on given coordinates).
+The **API endpoint** */discovery*  takes coordinates of the customer as an input, and **returns a page (JSON response)** containing *most popular, newest and nearby* restaurants (based on given coordinates).
 
 > Restaurant data example
 
