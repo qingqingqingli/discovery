@@ -22,7 +22,7 @@ pip3 --version
 
 echo "$Purple Install Python Requirements $Color_Off"
 
-python3 -m pip install -r setup/requirements.txt
+python3 -m pip install -r srcs/requirements.txt
 
 
 ####################################################################
