@@ -5,6 +5,31 @@
 
 The task is to create an **API endpoint** */discovery* that takes coordinates of the customer as an input and then **returns a page (JSON response)** containing *most popular, newest and nearby* restaurants (based on given coordinates).
 
+> Restaurant data example
+
+```json
+{
+   "blurhash":"UAPp-JsCNbr[UQagn*V^p-bYjIjtL?kSo]bG",
+   "location":[
+      24.933257,
+      60.171263
+   ],
+   "name":"Charming Cherry House",
+   "online": true,
+   "launch_date":"2020-09-20",
+   "popularity":0.665082352909038
+}
+```
+
+**Fields**:
+
+- `blurhash`: image representation (type: string)
+- `location`: Restaurant's location as latitude and longitude coordinates. First element in the list is the longitude (type: a list containing two decimal elements)
+- name: The name of the restaurant (type: string)
+- `launch_date`: the date when the restaurant was added to Wolt app (type: string, ISO 8601 date)
+- `online`: if true, the restaurant is accepting orders. If false, the restaurant is closed (type: boolean)
+- `popularity`: the higher the number, the more popular the restaurant is in Wolt app (type: a float between 0-1, where 1 is the - most popular restaurant)
+
 ## How to test
 
 - Step 1: The `setup.sh` script automates the process to install `pip`, `required Python packages` for this project, and the `python script` to start the endpoint.
