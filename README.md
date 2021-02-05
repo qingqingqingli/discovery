@@ -30,6 +30,19 @@ The task is to create an **API endpoint** */discovery* that takes coordinates of
 - `online`: if true, the restaurant is accepting orders. If false, the restaurant is closed (type: boolean)
 - `popularity`: the higher the number, the more popular the restaurant is in Wolt app (type: a float between 0-1, where 1 is the - most popular restaurant)
 
+**List requirements**:
+
+- For each restaurants-list you need to add maximum 10 restaurant objects.
+- All restaurants returned by the endpoint must be closer than 1.5 kilometers from given coordinates.
+- Open restaurants (online=true) are more important than closed ones.
+
+**Sorting rules for each list**:
+
+- “Popular Restaurants”: highest popularity value first (descending order)
+- “New Restaurants”: Newest launch_date first (descending). This list has also a special rule: launch_date must be no older than 4 months.
+- “Nearby Restaurants”: Closest to the given location first (ascending).
+
+
 ## How to test
 
 - Step 1: The `setup.sh` script automates the process to install `pip`, `required Python packages` for this project, and the `python script` to start the endpoint.
