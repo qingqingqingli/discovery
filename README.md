@@ -32,15 +32,15 @@ The task is to create an **API endpoint** */discovery* that takes coordinates of
 
 **List requirements**:
 
-- For each restaurants-list you need to add maximum 10 restaurant objects.
-- All restaurants returned by the endpoint must be closer than 1.5 kilometers from given coordinates.
-- Open restaurants (online=true) are more important than closed ones.
+- For each restaurants-list you need to add `maximum 10` restaurant objects.
+- All restaurants returned by the endpoint must be `closer than 1.5 kilometers` from given coordinates.
+- `Open restaurants` (online=true) are more important than closed ones.
 
 **Sorting rules for each list**:
 
-- “Popular Restaurants”: highest popularity value first (descending order)
-- “New Restaurants”: Newest launch_date first (descending). This list has also a special rule: launch_date must be no older than 4 months.
-- “Nearby Restaurants”: Closest to the given location first (ascending).
+- `“Popular Restaurants”`: highest popularity value first (descending order)
+- `“New Restaurants”`: Newest launch_date first (descending). This list has also a special rule: launch_date must be no older than 4 months.
+- `“Nearby Restaurants”`: Closest to the given location first (ascending).
 
 
 ## How to test
