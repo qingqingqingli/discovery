@@ -31,4 +31,4 @@ python3 -m pip install -r srcs/requirements.txt
 
 echo "$Purple Run Python Script $Color_Off"
 
-python3 endpoint_discovery.py
+python3 srcs/endpoint_discovery.py
