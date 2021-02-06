@@ -3,7 +3,7 @@
 
 ## Overview
 
-The **API endpoint** */discovery*  takes coordinates of the customer as an input, and **returns a page (JSON response)** containing *most popular, newest and nearby* restaurants (based on given coordinates).
+The **API endpoint** `/discovery` takes coordinates of the customer as an input, and **returns a page (JSON response)** containing *most popular, newest and nearby* restaurants (based on given coordinates).
 
 > Restaurant data example
 
